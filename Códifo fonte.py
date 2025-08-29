@@ -1,6 +1,3 @@
-# Estrutura para Sistema de Clínica Médica
-
-# paciente.py
 class Paciente:
     def __init__(self, nome, idade, cpf):
         self.nome = nome
@@ -11,7 +8,6 @@ class Paciente:
         return f"Nome: {self.nome}, Idade: {self.idade}, CPF: {self.cpf}"
 
 
-# prescricao.py
 class Prescricao:
     def __init__(self, descricao):
         self.descricao = descricao
@@ -20,7 +16,6 @@ class Prescricao:
         return f"Prescrição: {self.descricao}"
 
 
-# consulta.py
 from prescricao import Prescricao
 
 class Consulta:
@@ -33,7 +28,6 @@ class Consulta:
         return f"Consulta de {self.paciente.nome} em {self.data}: {self.prescricao}"
 
 
-# clinica.py
 class Clinica:
     def __init__(self):
         self.consultas = []
@@ -45,7 +39,6 @@ class Clinica:
         return [str(consulta) for consulta in self.consultas]
 
 
-# main.py
 from paciente import Paciente
 from prescricao import Prescricao
 from consulta import Consulta
